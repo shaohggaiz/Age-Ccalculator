@@ -11,6 +11,7 @@ body {
     justify-content: center;
 }
 .calculator-age {
+    text-align: center;
     margin-top: 60px;
     width: 550px;
     height: 280px;

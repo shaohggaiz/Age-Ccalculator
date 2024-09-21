@@ -1,6 +1,8 @@
-const inputValue = document.querySelector('.date-value');
+const inputValue = document.querySelector('#date-value');
 const btnAge = document.querySelector('.btn-age');
 const resutl = document.querySelector('.resutl');
+
+inputValue.max = new Date().toISOString().split("T")[0];
 
 resutl.innerHTML = `Your age is 21 years old`;
 

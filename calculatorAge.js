@@ -2,7 +2,7 @@ const inputValue = document.querySelector('#date-value');
 const btnAge = document.querySelector('.btn-age');
 const resutl = document.querySelector('.resutl');
 
-//inputValue.max = new Date().toISOString().split("T")[0];
+inputValue.max = new Date().toISOString().split("T")[0];
 
 resutl.innerHTML = `Your age is 21 years old`;
 
@@ -23,10 +23,15 @@ btnAge.addEventListener('click', function() {
         const new_year = today.getFullYear()
 
         const monthDiff = today.getMonth() - dob.getMonth();
-        console.log(monthDiff)
+        const Hours = today.getHours() - dob.getHours();
+        const Minutes = today.getMinutes() - dob.getMinutes();
+        const Seconds = today.getSeconds() - dob.getSeconds();
+        // console.log(Hours)
+        // console.log(Minutes)
+        // console.log(Seconds)
 
         const age = new_year - dob_year;
-        resutl.innerHTML = `Your age is ${age} Y / ${monthDiff} M Years old` ;
+        resutl.innerHTML = `Your age is ${age} Y / ${monthDiff} M Years old Time: ${Hours}:${Minutes}:${Seconds}` ;
 
 
         if (dob > today) {
